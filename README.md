@@ -16,7 +16,7 @@ Micro-Coded Architecture So that interrupt stacking, entry, and exit are done au
 The processor mode can change when exceptions occur. And it can be in one of the following modes:
 Thread Mode: Which is entered on reset.
 Handler Mode: Which is entered on all other exceptions.
-![image](https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/4f52f2d6-4cdb-4315-b2b2-b55dc1639c43)
+<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/4f52f2d6-4cdb-4315-b2b2-b55dc1639c43" width=450 height=450>
 The STM32 ARM microcontroller interrupts are generated in the following manner:
 
 The system runs the ISR and then goes back to the main program. The NVIC and EXTI are configured. The Interrupt Service Routine (ISR) also known as the interrupt service routine handler is defined to enable the external interrupts.
@@ -26,8 +26,7 @@ Let us learn about the important features which are needed to configure external
 Interrupt Lines (EXTI0-EXTI15)
 The STM32 ARM microcontroller features 23 event sources which are divided into two sections. The first section corresponds t external pins on each port which are P0-P15. The second section corresponds to RTC, ethernet, USB interrupts. Therefore, in the first section, we have 16 lines corresponding to line0 till line15. All of these map to a pin number.
 The diagram below shows how the GPIO pins are connected to the 16 interrupt lines:
-
-![image](https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/3e1ededb-144c-4103-a64e-9132b7e06e1b)
+<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/3e1ededb-144c-4103-a64e-9132b7e06e1b" height=450 width=450>
 
 One important thing to note here is that same number pins are connected to line with the same number. All of these then join to form a single line. Additionally, we can not use two pins one one line at the same time. For example out of PA1, PB1, PC1, PD1, PE1, PF1 and PG1 you can only use a single pin out of all these. This is because they are all connected to the same line EXTI1. However you can use PA1 and PA2 at the same time as they are connected with different lines.
 
@@ -37,18 +36,23 @@ Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on diff
 2. click on FILE, click on new stm 32 project 
 3. select the target to be programmed  as shown below and click on next 
 4.select the program name 
-5. corresponding ioc file will be generated automatically 
+5. corresponding ioc file will be generated automatically
+   
 6.select the appropriate pins as gipo, in or out, USART or required options and configure 
+
 7.click on cntrl+S , automaticall C program will be generate
-8. edit the program and as per required 
-9. Select EXTI pin configuration and clock configuration 
-10. once the project is bulild 
-11. click on debug option 
-12.  Creating Proteus project and running the simulation We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
-13. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
-14. After creation of the circuit as per requirement as shown below 
-15. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
-16. click on debug and simulate using simulation as shown below 
+
+8. edit the program and as per required
+9. 
+10. Select EXTI pin configuration and clock configuration
+11. 
+12. once the project is bulild 
+13. click on debug option 
+14.  Creating Proteus project and running the simulation We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
+15. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
+16. After creation of the circuit as per requirement as shown below 
+17. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
+18. click on debug and simulate using simulation as shown below 
 
 ## STM 32 CUBE PROGRAM :
 ```
@@ -168,10 +172,14 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 ## Output screen shots of proteus  :
- 
- 
+<img src="https://github.com/BaskaranV15/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/118703522/2f0d9b19-eb1e-42d5-8bd0-37dcbb84f7cc" height=450 width=450>
+
+<img src="https://github.com/BaskaranV15/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/118703522/c61f6abe-f66e-4978-8800-10dddcbc8bba" width=450 height=450>
+
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
+ <img src="https://github.com/BaskaranV15/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/118703522/599c0eb8-f25e-4a27-ac07-3a88b13224d1" width=450 height=450>
+
+
  
 ## Result :
 Interfacing a push button and interrupt genrateion is simulated using proteus 
