@@ -53,7 +53,8 @@ Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on diff
 16. After creation of the circuit as per requirement as shown below 
 17. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
 18. click on debug and simulate using simulation as shown below 
-
+## DEVELOPED BY:BASKARAN V
+## REF NO:212222230020
 ## STM 32 CUBE PROGRAM :
 ```
 #include "main.h"
